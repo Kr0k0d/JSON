@@ -205,3 +205,61 @@ touch preferences.json
   To https://github.com/Kr0k0d/JSON.git
   44ed8d2..90df81d  main -> main
   ```
+---
+### 14. На веб интерфейсе создать файл bug_report.json.
+Для этого нужно открыть GitHub, перейти в репозиторий,  нажать на кнопку "Add file" и выбрать "Create new file".
+```
+{  
+  "id": 404
+  "Name": "Ошибка при загрузке страницы."
+  "Description": "При попытке загрузить страницу, браузер выдает ошибку '404 Not Found'. Это происходит на всех страницах сайта, не только на одной."
+  "Environment": "Windows 10 Chrome."
+  "Reproduction": "Открыть любую страницу на сайте и попытаться ее загрузить."
+  "Expected result": "Страница должна загрузиться без ошибок."
+  "Current result": "Браузер выдал ошибку'404 Not Found'".
+}
+```
+---
+
+### 15. Сделать Commit changes (сохранить) изменения на веб интерфейсе.
+Нажимаем на кнопку "Commit changes".
+
+---
+
+### 16.На веб интерфейсе модифицировать файл bug_report.json, добавить баг репорт в формате JSON.
+Через GitHub внести изменение в файл bug_report.json
+```
+"Priority": "hight"
+
+```
+
+---
+
+### 17. Сделать Commit changes (сохранить) изменения на веб интерфейсе.
+
+Как и в пункте 14 коммитим изменения
+
+---
+
+### 18. Синхронизировать внешний и локальный репозиторий JSON
+
+Сохранить изменение на компьютере, помодет команда 
+
+```
+git pull
+```
+_Вывод_
+```
+remote: Enumerating objects: 7, done.
+remote: Counting objects: 100% (7/7), done.
+remote: Compressing objects: 100% (6/6), done.
+remote: Total 6 (delta 3), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (6/6), 1.60 KiB | 32.00 KiB/s, done.
+From https://github.com/Kr0k0d/JSON
+   1a17e44..528cef6  main       -> origin/main
+Updating 1a17e44..528cef6
+Fast-forward
+ bug_report.json | 10 ++++++++++
+ 1 file changed, 10 insertions(+)
+ create mode 100644 bug_report.json
+```
